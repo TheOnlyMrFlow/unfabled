@@ -1,11 +1,11 @@
-$thumbnail-size: 250px;
+$thumbnail-size: 450px;
 $product-description-height: 70px;
 
 #products,.featured-products,.product-accessories,.product-miniature  {
   .products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-evenly;
   }
   .product-thumbnail {
     display: block;
@@ -20,7 +20,7 @@ $product-description-height: 70px;
   .thumbnail-container {
     position: relative;
     margin-bottom: 1.563rem;
-    height: 318px;
+    height: 500px;
     width: $thumbnail-size;
     background: white;
     @include box-shadow;
