@@ -27,6 +27,7 @@
 @import "components/errors";
 @import "components/customization-modal";
 @import "components/sitemap";
+@import "custom";
 /*** HEADER ***/
 #header {
   background: rgb(255, 255, 255);
@@ -167,7 +168,7 @@
 }
 /*** WRAPPER ***/
 #wrapper {
-  background: $gray-light;
+  background: white;
   box-shadow: inset 0 2px 5px 0 rgba(0,0,0,0.11);
   padding-top: 1.563rem;
   .banner {

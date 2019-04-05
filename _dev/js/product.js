@@ -61,6 +61,7 @@ $(document).ready(function () {
 
   function imageScrollBox()
   {
+    //console.log($('#main .js-qv-product-images li'))
     if ($('#main .js-qv-product-images li').length > 2) {
       $('#main .js-qv-mask').addClass('scroll');
       $('.scroll-box-arrows').addClass('scroll');

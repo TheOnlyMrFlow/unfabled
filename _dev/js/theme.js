@@ -32,6 +32,7 @@ import './checkout';
 import './customer';
 import './listing';
 import './product';
+import './product_custom'
 import './cart';
 
 import DropDown from './components/drop-down';

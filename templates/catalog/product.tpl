@@ -53,7 +53,7 @@
     <meta itemprop="url" content="{$product.url}">
 
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-7">
         {block name='page_content_container'}
           <section class="page-content" id="content">
             {block name='page_content'}
@@ -72,24 +72,31 @@
                 <i class="material-icons left">&#xE314;</i>
                 <i class="material-icons right">&#xE315;</i>
               </div>
+              <div class="custom-carouss-arrows">
+                <i class="material-icons left">&#xE314;</i>
+                <i class="material-icons right">&#xE315;</i>
+              </div>
 
             {/block}
           </section>
         {/block}
         </div>
-        <div class="col-md-6">
+        <div class="col-md-5">
           {block name='page_header_container'}
             {block name='page_header'}
+              <h1>{Manufacturer::getnamebyid($product.id_manufacturer)}</h1> {* Florian *}
               <h1 class="h1" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
             {/block}
           {/block}
-          {block name='product_prices'}
-            {include file='catalog/_partials/product-prices.tpl'}
-          {/block}
+          
 
           <div class="product-information">
             {block name='product_description_short'}
+              <p>Ref : {$product.reference|escape:'htmlall':'UTF-8'}</p>  {* Florian *}
               <div id="product-description-short-{$product.id}" itemprop="description">{$product.description_short nofilter}</div>
+              {block name='product_prices'}
+                {include file='catalog/_partials/product-prices.tpl'}
+              {/block}
             {/block}
 
             {if $product.is_customizable && count($product.customizations.fields)}
@@ -126,13 +133,35 @@
                     {include file='catalog/_partials/product-discounts.tpl'}
                   {/block}
 
+
                   {block name='product_add_to_cart'}
                     {include file='catalog/_partials/product-add-to-cart.tpl'}
                   {/block}
 
-                  {block name='product_additional_info'}
+                  {* TESTS *}
+
+
+                  <div class="row variants-add">
+                    <div class="col-md-6">
+                      {block name='product_variants'}
+                        {include file='catalog/_partials/product-variants.tpl'}
+                      {/block}
+                    </div>
+                    <div class="col-md-6">
+                      {block name='product_add_to_cart'}
+                        {include file='catalog/_partials/product-add-to-cart.tpl'}
+                      {/block}
+                    </div>
+                  </div>
+
+
+                  {* //TESTS *}
+
+
+                  {* Commente par florian : *}
+                  {* {block name='product_additional_info'}
                     {include file='catalog/_partials/product-additional-info.tpl'}
-                  {/block}
+                  {/block} *}
 
                   {* Input to refresh product HTML removed, block kept for compatibility with themes *}
                   {block name='product_refresh'}{/block}
@@ -141,11 +170,17 @@
 
             </div>
 
-            {block name='hook_display_reassurance'}
+            
+            {* comente par florian :  *}
+            {* {block name='hook_display_reassurance'}
               {hook h='displayReassurance'}
-            {/block}
+            {/block} *}
 
-            {block name='product_tabs'}
+            
+        </div>
+      </div>
+      <div class="col-md-12">
+        {block name='product_tabs'}
               <div class="tabs">
                 <ul class="nav nav-tabs" role="tablist">
                   {if $product.description}
@@ -228,9 +263,10 @@
               </div>  
             </div>
           {/block}
-        </div>
-      </div>
+      </div> 
+
     </div>
+
 
     {block name='product_accessories'}
       {if $accessories}

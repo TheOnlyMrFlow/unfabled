@@ -24,11 +24,11 @@
  *}
 <div class="product-add-to-cart">
   {if !$configuration.is_catalog}
-    <span class="control-label">{l s='Quantity' d='Shop.Theme.Catalog'}</span>
+    {* <span class="control-label">{l s='Quantity' d='Shop.Theme.Catalog'}</span> *}
 
     {block name='product_quantity'}
       <div class="product-quantity clearfix">
-        <div class="qty">
+        {* <div class="qty"
           <input
             type="number"
             name="qty"
@@ -38,7 +38,7 @@
             min="{$product.minimal_quantity}"
             aria-label="{l s='Quantity' d='Shop.Theme.Actions'}"
           >
-        </div>
+        </div> *}
 
         <div class="add">
           <button

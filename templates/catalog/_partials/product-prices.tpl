@@ -89,10 +89,10 @@
 
     {hook h='displayProductPriceBlock' product=$product type="weight" hook_origin='product_sheet'}
 
-    <div class="tax-shipping-delivery-label">
-      {if $configuration.display_taxes_label}
+    <div class="tax-shipping-delivery-label" style="display: none;">
+      {* {if $configuration.display_taxes_label} (Florian) -> decommenter pour faire apparaitre "TTC"
         {$product.labels.tax_long}
-      {/if}
+      {/if} *}
       {hook h='displayProductPriceBlock' product=$product type="price"}
       {hook h='displayProductPriceBlock' product=$product type="after_price"}
       {if $product.additional_delivery_times == 1}

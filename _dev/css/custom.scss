@@ -1,0 +1,33 @@
+.variants-add {
+    
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100px;
+    }
+}
+
+.custom-carouss-arrows {
+
+    i {
+        position: absolute;
+        top: 45%;
+        font-size: 4em !important;
+        cursor: pointer;
+        user-select: none;
+        opacity: 0.35;
+        
+    }
+
+    .right {
+        right: 0;
+    }
+
+    .left {
+        left: 0;
+    }
+    
+
+}

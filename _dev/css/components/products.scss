@@ -215,7 +215,7 @@
   margin-bottom: $medium-space;
   position: relative;
   img {
-    @include box-shadow;
+    // @include box-shadow; //commente par florian
     background: white;
   }
   .layer {
@@ -384,6 +384,7 @@
 #main {
   .images-container {
     .js-qv-mask {
+      display: none; // ajoute par florian
       white-space: nowrap;
       overflow: hidden;
       &.scroll {
@@ -394,15 +395,16 @@
   }
 }
 .scroll-box-arrows {
-  display: none;
+  display: none; 
   &.scroll {
     display: block;
   }
   i {
+    display: none;
     position: absolute;
-    bottom: 1.625rem;
+    bottom: 1.625em;
     height: 100px;
-    line-height: 100px;
+    line-height: 100px; //commente par florian 
     cursor: pointer;
   }
   .left {
@@ -462,7 +464,7 @@
 }
 .product-variants {
   > .product-variants-item {
-    margin: $medium-space 0;
+    margin: 0 0 $medium-space 0;
     select {
       background-color: white;
       width: auto;
