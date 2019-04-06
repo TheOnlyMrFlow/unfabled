@@ -2,9 +2,9 @@ name: unfabled
 display_name: Unfabled
 version: 1.0.0
 author:
-  name: "PrestaShop Team"
-  email: "pub@prestashop.com"
-  url: "http://www.prestashop.com"
+  name: "Florian - HBH"
+  email: "florian.comte@hbh-conseil.com"
+  url: "floriancomte.fr"
 
 meta:
   compatibility:

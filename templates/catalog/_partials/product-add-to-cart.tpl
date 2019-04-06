@@ -38,7 +38,7 @@
             min="{$product.minimal_quantity}"
             aria-label="{l s='Quantity' d='Shop.Theme.Actions'}"
           >
-        </div> *}
+        </div> *} {*commente par florian *}
 
         <div class="add">
           <button
