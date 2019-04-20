@@ -85,6 +85,7 @@
           {block name='page_header_container'}
             {block name='page_header'}
               <h1>{Manufacturer::getnamebyid($product.id_manufacturer)}</h1> {* Florian *}
+              <h1>{$category->name}</h1> {* Florian *}
               <h1 class="h1" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
             {/block}
           {/block}

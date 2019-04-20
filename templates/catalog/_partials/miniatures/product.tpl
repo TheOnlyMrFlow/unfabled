@@ -42,7 +42,7 @@
       {/block}
 
       <div class="product-description">
-        <h3 class="h3 product-brand">{Manufacturer::getnamebyid($product.id_manufacturer)}</h3>
+        <h3 class="h3 product-brand">{$product->category_name}</h3>
         {block name='product_name'}
           {if $page.page_name == 'index'}
             <h3 class="h3 product-title" itemprop="name"><a href="{$product.url}">{$product.name|truncate:30:'...'}</a></h3>
@@ -83,13 +83,13 @@
         {/block}
       </div>
 
-      {block name='product_flags'}
+      {* {block name='product_flags'}
         <ul class="product-flags">
           {foreach from=$product.flags item=flag}
             <li class="product-flag {$flag.type}">{$flag.label}</li>
           {/foreach}
         </ul>
-      {/block}
+      {/block} *}
 
       {* <div class="highlighted-informations{if !$product.main_variants} no-variants{/if} hidden-sm-down">
         {block name='quick_view'}

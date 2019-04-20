@@ -48,7 +48,7 @@ $product-description-height: 70px;
       position: relative;
       height: calc(100% - #{$product-description-height});
       img {
-        width: 100%; // modifier par florian, old = max-width au lieu de width
+        max-width: 100%; // modifier par florian, old = max-width au lieu de width
         position: absolute;
         top: 0;
         bottom: 0;
