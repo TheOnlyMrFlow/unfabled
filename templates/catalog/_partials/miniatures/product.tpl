@@ -89,7 +89,7 @@
             <li class="product-flag {$flag.type}">{$flag.label}</li>
           {/foreach}
         </ul>
-      {/block} *}
+      {/block} comm par florian*}
 
       {* <div class="highlighted-informations{if !$product.main_variants} no-variants{/if} hidden-sm-down">
         {block name='quick_view'}

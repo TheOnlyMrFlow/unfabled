@@ -57,13 +57,13 @@
         {block name='page_content_container'}
           <section class="page-content" id="content">
             {block name='page_content'}
-              {block name='product_flags'}
+              {* {block name='product_flags'}
                 <ul class="product-flags">
                   {foreach from=$product.flags item=flag}
                     <li class="product-flag {$flag.type}">{$flag.label}</li>
                   {/foreach}
                 </ul>
-              {/block}
+              {/block} comm par florian *}
 
               {block name='product_cover_thumbnails'}
                 {include file='catalog/_partials/product-cover-thumbnails.tpl'}
