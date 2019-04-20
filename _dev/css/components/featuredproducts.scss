@@ -1,11 +1,11 @@
-$thumbnail-size: 450px;
+$thumbnail-size: 370px;
 $product-description-height: 70px;
 
 #products,.featured-products,.product-accessories,.product-miniature  {
   .products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    //justify-content: space-evenly;
   }
   .product-thumbnail {
     display: block;
@@ -20,35 +20,35 @@ $product-description-height: 70px;
   .thumbnail-container {
     position: relative;
     margin-bottom: 1.563rem;
-    height: 500px;
+    height: $thumbnail-size;
     width: $thumbnail-size;
     background: white;
-    @include box-shadow;
-    &:hover, &:focus {
-      .highlighted-informations {
-        bottom: 5.5rem;
-        &::after {
-          opacity: 1;
-        }
-        &.no-variants{
-          bottom: 4.2rem;
-        }
-      }
-      .product-description::after{
-        content: "";
-        border-top: $gray 1px solid;
-        position: absolute;
-        width: 80%;
-        top: 0;
-        left: 10%;
-        opacity: .25;
-      }
-    }
+    //@include box-shadow; //commente par florian
+    // &:hover, &:focus {
+    //   .highlighted-informations {
+    //     bottom: 5.5rem;
+    //     &::after {
+    //       opacity: 1;
+    //     }
+    //     &.no-variants{
+    //       bottom: 4.2rem;
+    //     }
+    //   }
+    //   .product-description::after{
+    //     content: "";
+    //     border-top: $gray 1px solid;
+    //     position: absolute;
+    //     width: 80%;
+    //     top: 0;
+    //     left: 10%;
+    //     opacity: .25;
+    //   }
+    // } // totu le bloc commente par florian
     .product-thumbnail {
       position: relative;
       height: calc(100% - #{$product-description-height});
       img {
-        max-width: 100%;
+        width: 100%; // modifier par florian, old = max-width au lieu de width
         position: absolute;
         top: 0;
         bottom: 0;
@@ -62,10 +62,16 @@ $product-description-height: 70px;
     text-align: center;
     margin-bottom: 1.5rem;
   }
+  .product-brand {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: .5rem;
+    margin-bottom: .1em;
+  }
   .product-title {
     text-align: center;
-    text-transform: capitalize;
-    margin-top: .7rem;
+    text-transform: uppercase;
+    margin: 0 .1em 0 .1em;
   }
   .product-price-and-shipping {
     color: $gray-darker;
@@ -90,7 +96,7 @@ $product-description-height: 70px;
     text-align: center;
     width: $thumbnail-size;
     height: 3.125rem;
-    box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.2); //commente par florian
     transition: bottom .3s;
     .quick-view {
       color: $gray;
@@ -111,7 +117,7 @@ $product-description-height: 70px;
   }
 
   .product-miniature {
-    margin: 0 .8125rem;
+    margin: 0; //.8125rem;
     .discount {
       display: none;
     }
@@ -185,9 +191,9 @@ $product-description-height: 70px;
 @include media-breakpoint-down(sm) {
   #products,.featured-products,.product-accessories  {
     .thumbnail-container {
-      @include box-shadow;
+      // @include box-shadow; //commente par florian
       .product-description{
-        box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.2);
+        //box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.2); //commente par florian
       }
     }
   }

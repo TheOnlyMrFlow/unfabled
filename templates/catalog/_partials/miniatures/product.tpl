@@ -42,6 +42,7 @@
       {/block}
 
       <div class="product-description">
+        <h3 class="h3 product-brand">{Manufacturer::getnamebyid($product.id_manufacturer)}</h3>
         {block name='product_name'}
           {if $page.page_name == 'index'}
             <h3 class="h3 product-title" itemprop="name"><a href="{$product.url}">{$product.name|truncate:30:'...'}</a></h3>
@@ -90,12 +91,12 @@
         </ul>
       {/block}
 
-      <div class="highlighted-informations{if !$product.main_variants} no-variants{/if} hidden-sm-down">
+      {* <div class="highlighted-informations{if !$product.main_variants} no-variants{/if} hidden-sm-down">
         {block name='quick_view'}
           <h2 class="h3 product-title" itemprop="name"><a href="{$product.url}">{$product.name|truncate:30:'...'}</a></h2>
-          {* <a class="quick-view" href="#" data-link-action="quickview">
+            <a class="quick-view" href="#" data-link-action="quickview">
             <i class="material-icons search">&#xE8B6;</i> {l s='Quick view' d='Shop.Theme.Actions'}
-          </a> *}
+          </a> 
         {/block}
 
 
@@ -104,7 +105,7 @@
             {include file='catalog/_partials/variant-links.tpl' variants=$product.main_variants}
           {/if}
         {/block}
-      </div>
+      </div> *}
     </div>
   </article>
 {/block}
