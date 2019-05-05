@@ -143,12 +143,12 @@
 
 
                   <div class="row variants-add">
-                    <div class="col-md-6 col-xs-4">
+                    <div class="col-lg-4 col-md-12 col-sm-4 col-xs-3">
                       {block name='product_variants'}
                         {include file='catalog/_partials/product-variants.tpl'}
                       {/block}
                     </div>
-                    <div class="col-md-6 col-xs-8">
+                    <div class="col-lg-8 col-md-12 col-sm-8 col-xs-9">
                       {block name='product_add_to_cart'}
                         {include file='catalog/_partials/product-add-to-cart.tpl'}
                       {/block}
