@@ -5,7 +5,7 @@ $product-description-height: 70px;
   .products {
     display: flex;
     flex-wrap: wrap;
-    //justify-content: space-evenly;
+    justify-content: center;
   }
   .product-thumbnail {
     display: block;
