@@ -186,7 +186,7 @@
   margin-bottom: 0;
 }
 .tabs {
-  @include box-shadow;
+  //@include box-shadow;
   margin-top: 2rem;
   background: white;
   padding: $medium-space $large-space;
