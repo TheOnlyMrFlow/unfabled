@@ -54,7 +54,7 @@
 
     <div class="row">
     <div class="col-12">
-    <div class="row product-main-row" style="min-height: 80vh;">
+    <div class="row product-main-row">
 
       <div class="col-md-7">
         {block name='page_content_container'}
