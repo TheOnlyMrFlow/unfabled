@@ -183,7 +183,7 @@
       <div class="col-md-12">
         {block name='product_tabs'}
               <div class="tabs">
-                <ul class="nav nav-tabs" role="tablist">
+                {* <ul class="nav nav-tabs" role="tablist">
                   {if $product.description}
                     <li class="nav-item">
                        <a
@@ -224,7 +224,7 @@
                         aria-controls="extra-{$extraKey}">{$extra.title}</a>
                     </li>
                   {/foreach}
-                </ul>
+                </ul> comm par florian *}
 
                 <div class="tab-content" id="tab-content">
                  <div class="tab-pane fade in{if $product.description} active{/if}" id="description" role="tabpanel">
