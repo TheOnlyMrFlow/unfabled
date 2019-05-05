@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 27);
+/******/ 	return __webpack_require__(__webpack_require__.s = 28);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -849,25 +849,27 @@ break;}}if(iStart !== startValue.length || iEnd !== endValue.length){if(Velocity
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-__webpack_require__(26);
+__webpack_require__(27);
+
+__webpack_require__(22);
+
+__webpack_require__(24);
 
 __webpack_require__(21);
 
-__webpack_require__(23);
-
 __webpack_require__(20);
-
-__webpack_require__(19);
 
 __webpack_require__(8);
 
 __webpack_require__(13);
 
-__webpack_require__(16);
-
 __webpack_require__(17);
 
 __webpack_require__(18);
+
+__webpack_require__(19);
+
+__webpack_require__(14);
 
 __webpack_require__(7);
 
@@ -895,13 +897,13 @@ var _prestashop = __webpack_require__(1);
 
 var _prestashop2 = _interopRequireDefault(_prestashop);
 
-var _events = __webpack_require__(22);
+var _events = __webpack_require__(23);
 
 var _events2 = _interopRequireDefault(_events);
 
-__webpack_require__(14);
-
 __webpack_require__(15);
+
+__webpack_require__(16);
 
 __webpack_require__(9);
 
@@ -1789,6 +1791,41 @@ function setupCustomerScripts() {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _prestashop = __webpack_require__(1);
+
+var _prestashop2 = _interopRequireDefault(_prestashop);
+
+(0, _jquery2['default'])(document).ready(function () {
+
+    console.log("cc");
+
+    fixHeader();
+});
+
+function fixHeader() {
+
+    var trueHeader = (0, _jquery2['default'])('#header');
+    var fixHeader = (0, _jquery2['default'])('.header-fix');
+
+    var h = trueHeader.height();
+    console.log("h = " + h);
+
+    fixHeader.css("height", h);
+}
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /**
  * 2007-2019 PrestaShop and Contributors
  *
@@ -2007,7 +2044,7 @@ function setupCustomerScripts() {
 })(window.jQuery);
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2172,7 +2209,7 @@ function setupCustomerScripts() {
 })(jQuery);
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2354,7 +2391,7 @@ function updateProductListDOM(data) {
 }
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2482,7 +2519,7 @@ var _prestashop2 = _interopRequireDefault(_prestashop);
 });
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2550,7 +2587,7 @@ function nextImage() {
 }
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2642,7 +2679,7 @@ function toggleMobileStyles() {
 });
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3325,7 +3362,7 @@ function toggleMobileStyles() {
 })(jQuery);
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4122,7 +4159,7 @@ if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requir
 })();
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4395,7 +4432,7 @@ function isUndefined(arg) {
 }
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4578,7 +4615,7 @@ var require;var require;
 });
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6518,7 +6555,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! tether 1.4
 });
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6546,14 +6583,14 @@ try {
 module.exports = g;
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["Tether"] = __webpack_require__(24);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(25)))
+/* WEBPACK VAR INJECTION */(function(global) {module.exports = global["Tether"] = __webpack_require__(25);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26)))
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(5);

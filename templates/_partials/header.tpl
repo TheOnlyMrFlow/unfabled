@@ -30,17 +30,22 @@
 
 {block name='header_nav'}
   <nav class="header-nav">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="hidden-sm-down">
-          <div class="col-md-5 col-xs-12">
-            {hook h='displayNav1'}
+
+          <div class="col-md-6 left-nav">
+              <h1>
+              <a href="{$urls.base_url}">
+                <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
+              </a>
+            </h1>
           </div>
-          <div class="col-md-7 right-nav">
+          <div class="col-md-6 right-nav">
               {hook h='displayNav2'}
           </div>
         </div>
-        <div class="hidden-md-up text-sm-center mobile">
+        <div class="hidden-md-up text-xs-center mobile">
           <div class="float-xs-left" id="menu-icon">
             <i class="material-icons d-inline">&#xE5D2;</i>
           </div>
@@ -59,17 +64,12 @@
     <div class="container">
        <div class="row">
         <div class="col-md-2 hidden-sm-down" id="_desktop_logo">
-            {if $page.page_name == 'index'}
-              <h1>
+              <h1 class="hidden-md-up">
                 <a href="{$urls.base_url}">
                   <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
                 </a>
               </h1>
-            {else}
-                <a href="{$urls.base_url}">
-                  <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
-                </a>
-            {/if}
+            
         </div>
         <div class="col-md-10 col-sm-12 position-static">
           {hook h='displayTop'}
