@@ -113,9 +113,9 @@
                   <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
                   <input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id">
 
-                  {block name='product_variants'}
+                  {* {block name='product_variants'}
                     {include file='catalog/_partials/product-variants.tpl'}
-                  {/block}
+                  {/block} comm par forian*}
 
                   {block name='product_pack'}
                     {if $packItems}
@@ -135,20 +135,20 @@
                   {/block}
 
 
-                  {block name='product_add_to_cart'}
+                  {* {block name='product_add_to_cart'}
                     {include file='catalog/_partials/product-add-to-cart.tpl'}
-                  {/block}
+                  {/block} *}
 
                   {* TESTS *}
 
 
                   <div class="row variants-add">
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-xs-4">
                       {block name='product_variants'}
                         {include file='catalog/_partials/product-variants.tpl'}
                       {/block}
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-xs-8">
                       {block name='product_add_to_cart'}
                         {include file='catalog/_partials/product-add-to-cart.tpl'}
                       {/block}

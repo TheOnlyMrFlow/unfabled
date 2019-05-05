@@ -27,7 +27,7 @@
     {if !empty($group.attributes)}
     <div class="clearfix product-variants-item">
 
-      <span class="control-label">{$group.name}</span>
+      {* <span class="control-label">{$group.name}</span> *}
       {if $group.group_type == 'select'}
         <select
           class="form-control form-control-select"
