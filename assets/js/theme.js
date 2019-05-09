@@ -871,6 +871,8 @@ __webpack_require__(19);
 
 __webpack_require__(14);
 
+__webpack_require__(78);
+
 __webpack_require__(7);
 
 var _componentsDropDown = __webpack_require__(2);
@@ -1694,6 +1696,7 @@ var TopMenu = (function (_DropDown) {
         }
       });
       (0, _jquery2['default'])('#menu-icon').on('click', function () {
+        (0, _jquery2['default'])(".header-top").show();
         (0, _jquery2['default'])('#mobile_top_menu_wrapper').toggle();
         self.toggleMobileMenu();
       });
@@ -1808,6 +1811,7 @@ var _prestashop2 = _interopRequireDefault(_prestashop);
     console.log("cc");
 
     fixHeader();
+    bindBrandsMenu();
 });
 
 function fixHeader() {
@@ -1819,6 +1823,24 @@ function fixHeader() {
     console.log("h = " + h);
 
     fixHeader.css("height", h);
+}
+
+function bindBrandsMenu() {
+
+    var button = (0, _jquery2['default'])('.mid-nav');
+    var menu = (0, _jquery2['default'])('.header-top');
+
+    button.on('click', function (event) {
+        if (button.hasClass('clicked')) {
+            button.removeClass('clicked');
+            button.find('i').html('&#xE5D2');
+            menu.hide();
+        } else {
+            button.addClass('clicked');
+            button.find('i').text('close');
+            menu.show();
+        }
+    });
 }
 
 /***/ }),
@@ -6596,6 +6618,92 @@ module.exports = g;
 __webpack_require__(5);
 module.exports = __webpack_require__(6);
 
+
+/***/ }),
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */,
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+var _prestashop = __webpack_require__(1);
+
+var _prestashop2 = _interopRequireDefault(_prestashop);
+
+(0, _jquery2['default'])(document).ready(function () {
+
+    hideLandingOnClick();
+});
+
+function hideLandingOnClick() {
+
+    var landing = (0, _jquery2['default'])('.landing-frame');
+    var landingFix = (0, _jquery2['default'])('.landing-frame-fix');
+    var button = (0, _jquery2['default'])('.landing-button').find('a');
+
+    button.on('click', function (event) {
+        setTimeout(function () {
+            landing.hide();
+            landingFix.hide();
+        }, 600);
+        console.log('hide');
+    });
+}
 
 /***/ })
 /******/ ]);

@@ -35,7 +35,7 @@
   width: 100%;
   z-index: 2;
   background: rgb(255, 255, 255);
-  color: $gray;
+  // color: $gray;
 
   .logo {
     margin-top: 10px;
@@ -62,7 +62,7 @@
   .header-nav {
     border-bottom: $gray-light 2px solid;
     max-height: 50px;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     #menu-icon {
       vertical-align: middle;
       cursor: pointer;
@@ -76,6 +76,25 @@
       flex-wrap: nowrap;
       justify-content: center;
     }
+
+    .mid-nav {
+      height: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-content: center;
+
+      i {
+        cursor: pointer;
+        padding-top: 15px;
+        -webkit-user-select: none; /* Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+      }
+
+    }
+
     .left-nav {
       //height: 100%;
       h1 {
@@ -160,14 +179,20 @@
     }
   }
   .header-top {
+
+    display: none;
     
-    background: rgba(0, 0, 0, 0.089);
+    //background: rgba(0, 0, 0, 0.089);
+    border-color: black;
+    border-style: solid none;
+    border-width: 2px;
 
     > .container {
       position: relative;
     }
-    padding-bottom: 1.25rem;
+    // padding-bottom: 1.25rem;
     .menu {
+      width: 100%;
       padding-left: 15px;
       margin-bottom: 0.375rem;
     }

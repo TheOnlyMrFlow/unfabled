@@ -126,3 +126,15 @@ html::-webkit-scrollbar-thumb
 
     }
 }
+
+
+.category {
+    width: 30%;
+    overflow: hidden;
+
+    a {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+}

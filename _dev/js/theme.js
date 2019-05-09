@@ -34,6 +34,7 @@ import './listing';
 import './product';
 import './product_custom';
 import './header_fix_custom';
+import './landing_custom';
 import './cart';
 
 import DropDown from './components/drop-down';

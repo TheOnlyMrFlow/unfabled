@@ -46,6 +46,7 @@ export default class TopMenu extends DropDown {
       }
     });
     $('#menu-icon').on('click', function() {
+      $(".header-top").show();
       $('#mobile_top_menu_wrapper').toggle();
       self.toggleMobileMenu();
     });

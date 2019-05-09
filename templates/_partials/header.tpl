@@ -30,18 +30,22 @@
 
 {block name='header_nav'}
   <nav class="header-nav">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="hidden-sm-down">
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <div class="hidden-sm-down h-100">
 
-          <div class="col-md-6 left-nav">
+          <div class="col-md-5 left-nav">
               <h1>
               <a href="{$urls.base_url}">
                 <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
               </a>
             </h1>
           </div>
-          <div class="col-md-6 right-nav">
+          <div class="col-md-2 mid-nav" >
+            <i class="material-icons d-inline">&#xE5D2;</i>
+            {* <h1>cc</h1> *}
+          </div>
+          <div class="col-md-5 right-nav">
               {hook h='displayNav2'}
           </div>
         </div>
@@ -71,7 +75,7 @@
               </h1>
             
         </div>
-        <div class="col-md-10 col-sm-12 position-static">
+        <div class="col-md-12 col-sm-12 position-static">
           {hook h='displayTop'}
           <div class="clearfix"></div>
         </div>

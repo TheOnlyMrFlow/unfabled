@@ -38,7 +38,7 @@
   <div></div>
 </section>
 
-<div style="height: 100vh;"></div>
+<div class="landing-frame-fix" style="height: 100vh;"></div>
 
 <section class="featured-products clearfix" id="featured-products">
   <h2 class="h2 products-section-title text-uppercase">
