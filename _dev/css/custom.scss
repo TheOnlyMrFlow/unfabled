@@ -1,4 +1,15 @@
 
+//animations
+
+@keyFrames fadeInCustom {
+    from {
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
+}
 
 html {
     scroll-behavior: smooth;
@@ -28,7 +39,20 @@ html::-webkit-scrollbar-thumb
         
         display: flex;
         align-items: center;
-        min-height: 80vh;
+        min-height: 90vh;
+    }
+}
+
+.thumbnail-container {
+
+    a {
+
+        img {
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
     }
 }
 
@@ -41,6 +65,19 @@ html::-webkit-scrollbar-thumb
         //justify-content: center;
         //min-height: 100px;
     }
+}
+
+.images-container {
+
+    opacity: 0%;;
+    
+    animation-name: slideeInLeft, fadeInCustom;
+    -webkit-animation-name: slideInLeft, fadeInCustom;
+
+    animation-duration: 1s, 1s;
+    -webkit-animation-duration: 1s, 1s;
+    
+    animation-fill-mode: both;
 }
 
 .custom-carouss-arrows {
@@ -63,6 +100,10 @@ html::-webkit-scrollbar-thumb
         left: 0;
     }
 
+}
+
+.header-fix {
+    margin-bottom: 25px;
 }
 
 #wrapper {
@@ -130,7 +171,7 @@ html::-webkit-scrollbar-thumb
 
 .category {
     width: 30%;
-    overflow: hidden;
+    // overflow: hidden;
 
     a {
         width: 50%;
@@ -138,3 +179,8 @@ html::-webkit-scrollbar-thumb
         text-align: center;
     }
 }
+
+#top-menu {
+    margin-top : 1rem !important;
+}
+

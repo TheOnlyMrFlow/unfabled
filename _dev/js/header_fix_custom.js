@@ -17,7 +17,7 @@ $(document).ready(function () {
 function fixHeader()
 {
 
-    let trueHeader = $('#header');
+    let trueHeader = $('.header-nav');
     let fixHeader = $('.header-fix');
 
     let h = trueHeader.height();
@@ -34,15 +34,24 @@ function bindBrandsMenu() {
 
     button.on('click', (event) => {
         if (button.hasClass('clicked')) {
-            button.removeClass('clicked');
-            button.find('i').html('&#xE5D2');
-            menu.hide();
+            menu.removeClass('slideInLeft');           
+            menu.addClass('slideOutRight')
+
+            setTimeout(() => {
+                button.find('i').html('&#xE5D2');
+                button.removeClass('clicked');
+                menu.hide();
+            }, 400);
             
         }
         else {
             button.addClass('clicked');            
             button.find('i').text('close');
+            menu.addClass('animated fast')
+            menu.removeClass('slideOutRight');           
+            menu.addClass('slideInLeft')
             menu.show();
+            
         }
     });
 }

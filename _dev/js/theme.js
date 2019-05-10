@@ -26,6 +26,7 @@ import 'expose-loader?Tether!tether';
 import 'bootstrap/dist/js/bootstrap.min';
 import 'flexibility';
 import 'bootstrap-touchspin';
+import 'animate.css'
 
 import './responsive';
 import './checkout';
