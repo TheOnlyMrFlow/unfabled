@@ -185,7 +185,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 link-to-desc animated infinite pulse delay-2s">
+      <div class="hidden-sm-down col-12 link-to-desc animated infinite pulse delay-2s">
         <h4>
           <a href="#prod-desc">Description<br><i class="material-icons">keyboard_arrow_down</i></a>
           

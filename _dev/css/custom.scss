@@ -47,6 +47,11 @@ html::-webkit-scrollbar-thumb
         align-items: center;
         min-height: 80vh;
     }
+
+    @include media-breakpoint-down(sm) {
+        
+        margin: 20px;
+    }
 }
 .link-to-desc {
     
