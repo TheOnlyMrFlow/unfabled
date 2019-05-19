@@ -56,6 +56,13 @@
     <div class="col-12">
     <div class="row product-main-row">
 
+    <div class="link-to-desc animated infinite pulse delay-2s">
+      <h4>
+        <a href="#prod-desc">Description<br><i class="material-icons">keyboard_arrow_down</i></a>
+        
+      </h4>
+    </div>
+
       <div class="col-md-7">
         {block name='page_content_container'}
           <section class="page-content" id="content">
@@ -185,7 +192,7 @@
       </div>
       </div>
       </div>
-      <div class="col-md-12">
+      <div class="col-md-12" id="prod-desc">
         {block name='product_tabs'}
               <div class="tabs">
                 {* <ul class="nav nav-tabs" role="tablist">
