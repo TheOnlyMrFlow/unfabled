@@ -53,144 +53,143 @@
     <meta itemprop="url" content="{$product.url}">
 
     <div class="row">
-    <div class="col-12">
-    <div class="row product-main-row">
+      <div class="col-12">
+        <div class="row product-main-row">
 
-    <div class="link-to-desc animated infinite pulse delay-2s">
-      <h4>
-        <a href="#prod-desc">Description<br><i class="material-icons">keyboard_arrow_down</i></a>
-        
-      </h4>
-    </div>
+          <div class="col-md-7">
+            {block name='page_content_container'}
+              <section class="page-content" id="content">
+                {block name='page_content'}
+                  {* {block name='product_flags'}
+                    <ul class="product-flags">
+                      {foreach from=$product.flags item=flag}
+                        <li class="product-flag {$flag.type}">{$flag.label}</li>
+                      {/foreach}
+                    </ul>
+                  {/block} comm par florian *}
 
-      <div class="col-md-7">
-        {block name='page_content_container'}
-          <section class="page-content" id="content">
-            {block name='page_content'}
-              {* {block name='product_flags'}
-                <ul class="product-flags">
-                  {foreach from=$product.flags item=flag}
-                    <li class="product-flag {$flag.type}">{$flag.label}</li>
-                  {/foreach}
-                </ul>
-              {/block} comm par florian *}
-
-              {block name='product_cover_thumbnails'}
-                {include file='catalog/_partials/product-cover-thumbnails.tpl'}
-              {/block}
-              <div class="scroll-box-arrows">
-                <i class="material-icons left">&#xE314;</i>
-                <i class="material-icons right">&#xE315;</i>
-              </div>
-              <div class="custom-carouss-arrows">
-                <i class="material-icons left">&#xE314;</i>
-                <i class="material-icons right">&#xE315;</i>
-              </div>
-
-            {/block}
-          </section>
-        {/block}
-        </div>
-        <div class="col-md-5">
-          {block name='page_header_container'}
-            {block name='page_header'}
-              <h1>{Manufacturer::getnamebyid($product.id_manufacturer)}</h1> {* Florian *}
-              <h1>{$category->name}</h1> {* Florian *}
-              <h1 class="h1" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
-            {/block}
-          {/block}
-          
-
-          <div class="product-information">
-            {block name='product_description_short'}
-              <p>Ref : {$product.reference|escape:'htmlall':'UTF-8'}</p>  {* Florian *}
-              <div id="product-description-short-{$product.id}" itemprop="description">{$product.description_short nofilter}</div>
-              {block name='product_prices'}
-                {include file='catalog/_partials/product-prices.tpl'}
-              {/block}
-            {/block}
-
-            {if $product.is_customizable && count($product.customizations.fields)}
-              {block name='product_customization'}
-                {include file="catalog/_partials/product-customization.tpl" customizations=$product.customizations}
-              {/block}
-            {/if}
-
-            <div class="product-actions">
-              {block name='product_buy'}
-                <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
-                  <input type="hidden" name="token" value="{$static_token}">
-                  <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
-                  <input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id">
-
-                  {* {block name='product_variants'}
-                    {include file='catalog/_partials/product-variants.tpl'}
-                  {/block} comm par forian*}
-
-                  {block name='product_pack'}
-                    {if $packItems}
-                      <section class="product-pack">
-                        <p class="h4">{l s='This pack contains' d='Shop.Theme.Catalog'}</p>
-                        {foreach from=$packItems item="product_pack"}
-                          {block name='product_miniature'}
-                            {include file='catalog/_partials/miniatures/pack-product.tpl' product=$product_pack}
-                          {/block}
-                        {/foreach}
-                    </section>
-                    {/if}
+                  {block name='product_cover_thumbnails'}
+                    {include file='catalog/_partials/product-cover-thumbnails.tpl'}
                   {/block}
-
-                  {block name='product_discounts'}
-                    {include file='catalog/_partials/product-discounts.tpl'}
-                  {/block}
-
-
-                  {* {block name='product_add_to_cart'}
-                    {include file='catalog/_partials/product-add-to-cart.tpl'}
-                  {/block} *}
-
-                  {* TESTS *}
-
-
-                  <div class="row variants-add">
-                    <div class="col-lg-4 col-md-12 col-sm-4 col-xs-3">
-                      {block name='product_variants'}
-                        {include file='catalog/_partials/product-variants.tpl'}
-                      {/block}
-                    </div>
-                    <div class="col-lg-8 col-md-12 col-sm-8 col-xs-9">
-                      {block name='product_add_to_cart'}
-                        {include file='catalog/_partials/product-add-to-cart.tpl'}
-                      {/block}
-                    </div>
+                  <div class="scroll-box-arrows">
+                    <i class="material-icons left">&#xE314;</i>
+                    <i class="material-icons right">&#xE315;</i>
+                  </div>
+                  <div class="custom-carouss-arrows">
+                    <i class="material-icons left">&#xE314;</i>
+                    <i class="material-icons right">&#xE315;</i>
                   </div>
 
+                {/block}
+              </section>
+            {/block}
+          </div>
+          <div class="col-md-5">
+            {block name='page_header_container'}
+              {block name='page_header'}
+                <h1>{Manufacturer::getnamebyid($product.id_manufacturer)}</h1> {* Florian *}
+                <h1>{$category->name}</h1> {* Florian *}
+                <h1 class="h1" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
+              {/block}
+            {/block}
+            
 
-                  {* //TESTS *}
-
-
-                  {* Commente par florian : *}
-                  {* {block name='product_additional_info'}
-                    {include file='catalog/_partials/product-additional-info.tpl'}
-                  {/block} *}
-
-                  {* Input to refresh product HTML removed, block kept for compatibility with themes *}
-                  {block name='product_refresh'}{/block}
-                </form>
+            <div class="product-information">
+              {block name='product_description_short'}
+                <p>Ref : {$product.reference|escape:'htmlall':'UTF-8'}</p>  {* Florian *}
+                <div id="product-description-short-{$product.id}" itemprop="description">{$product.description_short nofilter}</div>
+                {block name='product_prices'}
+                  {include file='catalog/_partials/product-prices.tpl'}
+                {/block}
               {/block}
 
+              {if $product.is_customizable && count($product.customizations.fields)}
+                {block name='product_customization'}
+                  {include file="catalog/_partials/product-customization.tpl" customizations=$product.customizations}
+                {/block}
+              {/if}
+
+              <div class="product-actions">
+                {block name='product_buy'}
+                  <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
+                    <input type="hidden" name="token" value="{$static_token}">
+                    <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
+                    <input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id">
+
+                    {* {block name='product_variants'}
+                      {include file='catalog/_partials/product-variants.tpl'}
+                    {/block} comm par forian*}
+
+                    {block name='product_pack'}
+                      {if $packItems}
+                        <section class="product-pack">
+                          <p class="h4">{l s='This pack contains' d='Shop.Theme.Catalog'}</p>
+                          {foreach from=$packItems item="product_pack"}
+                            {block name='product_miniature'}
+                              {include file='catalog/_partials/miniatures/pack-product.tpl' product=$product_pack}
+                            {/block}
+                          {/foreach}
+                      </section>
+                      {/if}
+                    {/block}
+
+                    {block name='product_discounts'}
+                      {include file='catalog/_partials/product-discounts.tpl'}
+                    {/block}
+
+
+                    {* {block name='product_add_to_cart'}
+                      {include file='catalog/_partials/product-add-to-cart.tpl'}
+                    {/block} *}
+
+                    {* TESTS *}
+
+
+                    <div class="row variants-add">
+                      <div class="col-lg-4 col-md-12 col-sm-4 col-xs-3">
+                        {block name='product_variants'}
+                          {include file='catalog/_partials/product-variants.tpl'}
+                        {/block}
+                      </div>
+                      <div class="col-lg-8 col-md-12 col-sm-8 col-xs-9">
+                        {block name='product_add_to_cart'}
+                          {include file='catalog/_partials/product-add-to-cart.tpl'}
+                        {/block}
+                      </div>
+                    </div>
+
+
+                    {* //TESTS *}
+
+
+                    {* Commente par florian : *}
+                    {* {block name='product_additional_info'}
+                      {include file='catalog/_partials/product-additional-info.tpl'}
+                    {/block} *}
+
+                    {* Input to refresh product HTML removed, block kept for compatibility with themes *}
+                    {block name='product_refresh'}{/block}
+                  </form>
+                {/block}
+
+              </div>
+
+                
+                {* comente par florian :  *}
+                {* {block name='hook_display_reassurance'}
+                  {hook h='displayReassurance'}
+                {/block} *}
+
+                
             </div>
-
-            
-            {* comente par florian :  *}
-            {* {block name='hook_display_reassurance'}
-              {hook h='displayReassurance'}
-            {/block} *}
-
-            
+          </div>
         </div>
       </div>
-      </div>
+      <div class="col-12 link-to-desc animated infinite pulse delay-2s">
+        <h4>
+          <a href="#prod-desc">Description<br><i class="material-icons">keyboard_arrow_down</i></a>
+          
+        </h4>
       </div>
       <div class="col-md-12" id="prod-desc">
         {block name='product_tabs'}
