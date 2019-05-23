@@ -1,13 +1,11 @@
 import $ from 'jquery';
 import prestashop from 'prestashop';
 
-
-
 $(document).ready(function () {
-   
-   
-    hideLandingOnClick();   
     
+    
+    hideLandingOnClick();   
+    hideLandingAccordingToUrl();
 
 });
 
@@ -31,4 +29,18 @@ function hideLandingOnClick()
         
     })
     
+}
+
+function hideLandingAccordingToUrl() {
+    let landing = $('.landing-frame');
+    let landingFix = $('.landing-frame-fix');
+
+    console.log(location.href.includes("#featured-products"))
+    console.log(location.href)
+
+
+    if (location.href.includes("#featured-products")) {
+        landing.hide()
+        landingFix.hide()
+    }
 }

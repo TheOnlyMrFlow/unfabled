@@ -1901,6 +1901,7 @@ var _prestashop2 = _interopRequireDefault(_prestashop);
 (0, _jquery2['default'])(document).ready(function () {
 
     hideLandingOnClick();
+    hideLandingAccordingToUrl();
 });
 
 function hideLandingOnClick() {
@@ -1916,6 +1917,19 @@ function hideLandingOnClick() {
         }, 600);
         console.log('hide');
     });
+}
+
+function hideLandingAccordingToUrl() {
+    var landing = (0, _jquery2['default'])('.landing-frame');
+    var landingFix = (0, _jquery2['default'])('.landing-frame-fix');
+
+    console.log(location.href.includes("#featured-products"));
+    console.log(location.href);
+
+    if (location.href.includes("#featured-products")) {
+        landing.hide();
+        landingFix.hide();
+    }
 }
 
 /***/ }),

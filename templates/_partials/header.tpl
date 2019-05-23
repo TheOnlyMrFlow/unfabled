@@ -36,7 +36,7 @@
 
           <div class="col-md-5 left-nav">
               <h1>
-              <a href="{$urls.base_url}">
+              <a href="{$urls.base_url}#featured-products">
                 <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
               </a>
             </h1>

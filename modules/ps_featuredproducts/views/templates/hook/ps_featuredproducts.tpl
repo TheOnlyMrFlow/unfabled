@@ -22,8 +22,8 @@
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  * International Registered Trademark & Property of PrestaShop SA
  *}
-
-<section class="landing-frame" style="height: 100vh;">
+{if !$customer.is_logged}
+<section class="hidden-sm-down landing-frame" style="height: 100vh;">
   <div class="landing-title">
     <h1>UNFABLED</h1>
   </div>
@@ -38,7 +38,9 @@
   <div></div>
 </section>
 
-<div class="landing-frame-fix" style="height: 100vh;"></div>
+<div class="hidden-sm-down landing-frame-fix" style="height: 100vh;"></div>
+
+{/if}
 
 <section class="featured-products clearfix" id="featured-products">
   <h2 class="h2 products-section-title text-uppercase">
