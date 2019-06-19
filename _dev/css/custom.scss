@@ -133,6 +133,11 @@ html::-webkit-scrollbar-thumb
 
 .product-description {
     font-family: "Georgia,Droid Serif,Noto Sans,sans-serif";
+    text-align: justify;
+
+    img {
+        max-width: 90%;
+    }
 }
 
 .header-fix {
