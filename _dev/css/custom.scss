@@ -208,6 +208,10 @@ html::-webkit-scrollbar-thumb
     }
 }
 
+.user-info-icon {
+    font-size: 2rem;
+}
+
 #search_widget {
 
     @include media-breakpoint-up(sm) {
