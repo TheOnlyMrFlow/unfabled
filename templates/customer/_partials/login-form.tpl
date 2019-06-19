@@ -50,7 +50,7 @@
         <input type="hidden" name="submitLogin" value="1">
         {block name='form_buttons'}
           <button id="submit-login" class="btn btn-primary" data-link-action="sign-in" type="submit" class="form-control-submit">
-            {l s='Sign in' d='Shop.Theme.Actions'}
+            {l s='Sign in button' d='Shop.Theme.Actions'}
           </button>
         {/block}
       </footer>
