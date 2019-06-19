@@ -2,7 +2,7 @@ name: unfabled
 display_name: Unfabled
 version: 1.0.0
 author:
-  name: "Florian - HBH"
+  name: "Florian de HBH Services & Conseils"
   email: "florian.comte@hbh-conseil.com"
   url: "floriancomte.fr"
 
@@ -45,6 +45,12 @@ assets:
 #    cart:
 #      - id: cat-extra-lib
 #        path: assets/js/cart-lib.js
+
+fonts:
+  plain:
+    regular: 
+      - id: plain-regular
+        path: assets/fonts/PlainBold-Regular.eot
 
 
 global_settings:

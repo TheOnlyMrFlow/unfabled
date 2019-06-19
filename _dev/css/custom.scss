@@ -12,6 +12,8 @@
 }
 
 html {
+
+
     scroll-behavior: smooth;
     max-width: 100vw;
 
@@ -37,8 +39,16 @@ html::-webkit-scrollbar-thumb
 	background-color: #000000;
 }
 
+.price {
+
+    letter-spacing: 2px;
+}
+
+
 
 .product-main-row {
+
+    font-family: Plain;
 
     
     @include media-breakpoint-up(md) {
@@ -51,6 +61,8 @@ html::-webkit-scrollbar-thumb
     @include media-breakpoint-down(sm) {
         
         margin: 20px;
+
+        text-align: center;
     }
 }
 .link-to-desc {
@@ -119,6 +131,10 @@ html::-webkit-scrollbar-thumb
 
 }
 
+.product-description {
+    font-family: "Georgia,Droid Serif,Noto Sans,sans-serif";
+}
+
 .header-fix {
     margin-bottom: 25px;
 }
@@ -153,6 +169,7 @@ html::-webkit-scrollbar-thumb
 
         h1 {
             font-size: 7vw;
+            font-family: Rams-Bold;
         }
     }
 
@@ -161,7 +178,7 @@ html::-webkit-scrollbar-thumb
         display: flex;
         justify-content: space-evenly;
         width: 100vw;
-        padding: 0 10vw;
+        padding: 0 25vw;
         margin: 0 auto;
 
         .landing-button {

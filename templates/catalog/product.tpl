@@ -96,7 +96,7 @@
 
             <div class="product-information">
               {block name='product_description_short'}
-                <p>Ref : {$product.reference|escape:'htmlall':'UTF-8'}</p>  {* Florian *}
+                <p>{$product.reference|escape:'htmlall':'UTF-8'}</p>  {* Florian *}
                 <div id="product-description-short-{$product.id}" itemprop="description">{$product.description_short nofilter}</div>
                 {block name='product_prices'}
                   {include file='catalog/_partials/product-prices.tpl'}

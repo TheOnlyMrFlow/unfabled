@@ -29,10 +29,10 @@
   </div>
   <div class="landing-buttons-group">
     <div class=landing-button>
-      <a href="#featured-products"><h2>The shop</h2></a>
+      <a href="#featured-products"><h2>THE SHOP</h2></a>
     </div>
     <div class=landing-button>
-      <h2>About us</h2>
+      <h2>ABOUT US</h2>
     </div>
   </div>
   <div></div>
