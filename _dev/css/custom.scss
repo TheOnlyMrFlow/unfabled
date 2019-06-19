@@ -19,6 +19,7 @@ html {
 
     body {
         max-width: 100%;
+        min-height: 100vh;
     }
 }
 
@@ -136,7 +137,7 @@ html::-webkit-scrollbar-thumb
     text-align: justify;
 
     img {
-        max-width: 90%;
+        max-width: 100%;
     }
 }
 
@@ -207,6 +208,14 @@ html::-webkit-scrollbar-thumb
     }
 }
 
+#search_widget {
+
+    @include media-breakpoint-up(sm) {
+        min-width: auto;
+        //width: 10px;
+        
+    }
+}
 
 .category {
     width: 30%;

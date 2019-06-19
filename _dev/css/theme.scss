@@ -42,9 +42,13 @@
   // color: $gray;
 
   .logo {
-    margin-top: 10px;
+
+    @include media-breakpoint-up(md) {
+
+      margin-top: 12px;
+    }
     // margin-bottom: 5px;
-    height: 35px;
+    height: 25px;
 
 
   }
@@ -64,6 +68,7 @@
     }
   }
   .header-nav {
+    box-shadow: 2px 2px 11px 0 rgba(0,0,0,.3);
     border-bottom: $gray-light 2px solid;
     max-height: 50px;
     // margin-bottom: 30px;
@@ -184,15 +189,15 @@
   }
   .header-top {
 
-    display: none;
     
     //background: rgba(0, 0, 0, 0.089);
     
-
+    
     @include media-breakpoint-up(md) {
+      display: none;
       border-color: black;
-    border-style: solid none;
-    border-width: 2px;
+      border-style: solid none;
+      border-width: 2px;
     }
 
     > .container {
@@ -268,7 +273,13 @@
 }
 /*** MAIN ***/
 #main {
+
+  min-height: 60vh;
+  margin-top: 50px;
+
+
   .page-header {
+    text-align: center;
     margin-bottom: 1.563rem;
   }
   .page-content {
@@ -363,7 +374,7 @@
     margin-top: 1rem;
   }
   #header {
-    background: $gray-light;
+    //background: $gray-light;
     .header-nav {
       background: white;
       margin-bottom: 0.625rem;

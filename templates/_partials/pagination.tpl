@@ -24,9 +24,9 @@
  *}
 <nav class="pagination">
   <div class="col-md-4">
-    {block name='pagination_summary'}
+    {* {block name='pagination_summary'}
       {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=['%from%' => $pagination.items_shown_from ,'%to%' => $pagination.items_shown_to, '%total%' => $pagination.total_items]}
-    {/block}
+    {/block} *}
   </div>
 
   <div class="col-md-6 offset-md-2 pr-0">
