@@ -6,7 +6,8 @@
   .search-widget {
     form {
       input[type="text"] {
-        min-width: inherit;
+        //min-width: inherit;
+        max-width: 150px;
         width: 100%;
       }
     }

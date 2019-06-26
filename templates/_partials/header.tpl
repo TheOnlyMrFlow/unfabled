@@ -34,18 +34,18 @@
       <div class="row h-100">
         <div class="hidden-sm-down h-100">
 
-          <div class="col-md-5 left-nav">
+          <div class="col-lg-5 col-md-3 left-nav">
               <h1>
               <a href="{$urls.base_url}#featured-products">
                 <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
               </a>
             </h1>
           </div>
-          <div class="col-md-2 mid-nav" >
+          <div class="col-lg-2 col-md-1 mid-nav" >
             <i class="material-icons d-inline">&#xE5D2;</i>
             {* <h1>cc</h1> *}
           </div>
-          <div class="col-md-5 right-nav">
+          <div class="col-lg-5 col-md-8 right-nav">
               {hook h='displayNav2'}
           </div>
         </div>
