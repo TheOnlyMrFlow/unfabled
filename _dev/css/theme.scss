@@ -1,3 +1,20 @@
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 800px,
+  lg: 1200px,
+  xl: 1400px
+);
+
+$container-max-widths: (
+  sm: 576px,
+  md: 800px,
+  lg: 1200px,
+  xl: 1400px
+);
+
+
 @import "~bourbon/app/assets/stylesheets/bourbon";
 @import "partials/_variables";
 @import "~bootstrap/scss/bootstrap";
@@ -33,20 +50,6 @@
 @import "Rams";
 
 
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-);
-
-$container-max-widths: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-);
 
 /*** HEADER ***/
 #header {
