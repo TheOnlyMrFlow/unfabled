@@ -28,12 +28,37 @@
     <h1>UNFABLED</h1>
   </div>
   <div class="landing-buttons-group">
-    <div class=landing-button>
+
+
+    <div class="button-wrapper landing-button">
+      <a href="#featured-products">
+          <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+            <rect class="button-wrapper__shape" height="60" width="280" rx="0" />
+          </svg>
+            <div class="button-wrapper__text">THE SHOP</div>
+      </a>
+    </div>
+
+    <div class="button-wrapper landing-button">
+      <a href="">
+          <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+            <rect class="button-wrapper__shape" height="60" width="280" rx="0" />
+          </svg>
+            <div class="button-wrapper__text">ABOUT US</div>
+      </a>
+    </div>
+
+
+
+
+    {* <div class=landing-button>
       <a href="#featured-products"><h2>THE SHOP</h2></a>
     </div>
     <div class=landing-button>
       <h2>ABOUT US</h2>
-    </div>
+    </div> *}
+
+
   </div>
   <div></div>
 </section>

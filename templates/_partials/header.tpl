@@ -34,11 +34,11 @@
       <div class="row h-100">
         <div class="hidden-sm-down h-100">
 
-          <div class="col-lg-5 col-md-3 left-nav">
+          <div class="col-lg-5 col-md-3 left-nav" id="_desktop_logo">
               <h1>
-              <a href="{$urls.base_url}#featured-products">
-                <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
-              </a>
+                <a href="{$urls.base_url}#featured-products">
+                  <img class="logo img-responsive" src="{$shop.logo}" alt="{$shop.name}">
+                </a>
             </h1>
           </div>
           <div class="col-lg-2 col-md-1 mid-nav" >

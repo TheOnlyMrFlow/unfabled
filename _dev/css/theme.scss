@@ -89,6 +89,7 @@ $container-max-widths: (
   .header-nav {
     box-shadow: 2px 2px 11px 0 rgba(0,0,0,.3);
     border-bottom: $gray-light 2px solid;
+    min-height: 48px;
     max-height: 50px;
     // margin-bottom: 30px;
     #menu-icon {
@@ -215,9 +216,10 @@ $container-max-widths: (
     
     @include media-breakpoint-up(md) {
       display: none;
-      border-color: black;
-      border-style: solid none;
-      border-width: 2px;
+      // border-color: black;
+      // border-style: solid none;
+      // border-width: 2px;
+      box-shadow: 2px 2px 11px 0 rgba(0,0,0,.3)
     }
 
     > .container {

@@ -37,6 +37,8 @@
       {hook h='displayAfterBodyOpeningTag'}
     {/block}
 
+
+    <div class="header-fix"></div>
     <header id="header">
       {block name='header'}
         {include file='checkout/_partials/header.tpl'}

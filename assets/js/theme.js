@@ -1862,8 +1862,8 @@ function bindBrandsMenu() {
 
     button.on('click', function (event) {
         if (button.hasClass('clicked')) {
-            menu.removeClass('slideInLeft');
-            menu.addClass('slideOutRight');
+            menu.removeClass('fadeInDown');
+            menu.addClass('fadeOutUp');
 
             setTimeout(function () {
                 button.find('i').html('&#xE5D2');
@@ -1874,8 +1874,8 @@ function bindBrandsMenu() {
             button.addClass('clicked');
             button.find('i').text('close');
             menu.addClass('animated fast');
-            menu.removeClass('slideOutRight');
-            menu.addClass('slideInLeft');
+            menu.removeClass('fadeOutUp');
+            menu.addClass('fadeInDown');
             menu.show();
         }
     });
@@ -1926,7 +1926,7 @@ function hideLandingAccordingToUrl() {
     console.log(location.href.includes("#featured-products"));
     console.log(location.href);
 
-    if (location.href.includes("#featured-products")) {
+    if (location.href.includes("#") || location.href.includes("?")) {
         landing.hide();
         landingFix.hide();
     }

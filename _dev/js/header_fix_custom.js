@@ -34,8 +34,8 @@ function bindBrandsMenu() {
 
     button.on('click', (event) => {
         if (button.hasClass('clicked')) {
-            menu.removeClass('slideInLeft');           
-            menu.addClass('slideOutRight')
+            menu.removeClass('fadeInDown');           
+            menu.addClass('fadeOutUp')
 
             setTimeout(() => {
                 button.find('i').html('&#xE5D2');
@@ -48,8 +48,8 @@ function bindBrandsMenu() {
             button.addClass('clicked');            
             button.find('i').text('close');
             menu.addClass('animated fast')
-            menu.removeClass('slideOutRight');           
-            menu.addClass('slideInLeft')
+            menu.removeClass('fadeOutUp');           
+            menu.addClass('fadeInDown')
             menu.show();
             
         }

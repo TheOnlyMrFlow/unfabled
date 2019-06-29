@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 //animations
 
 @keyFrames fadeInCustom {
@@ -193,21 +187,21 @@ html::-webkit-scrollbar-thumb
         padding: 0 25vw;
         margin: 0 auto;
 
-        .landing-button {
+        // .landing-button {
 
 
-            border-style: solid;
-            border-radius: 4px;
-            border-color: black;
-            border-radius: 10px;
+        //     border-style: solid;
+        //     border-radius: 4px;
+        //     border-color: black;
+        //     border-radius: 10px;
 
-            h2 {
-                padding: 30px 30px;
-                margin: 0 0 ;
-                font-size: 2vw;
-                font-weight: normal;
-            }
-        }
+        //     h2 {
+        //         padding: 30px 30px;
+        //         margin: 0 0 ;
+        //         font-size: 2vw;
+        //         font-weight: normal;
+        //     }
+        // }
 
         
 
@@ -242,3 +236,44 @@ html::-webkit-scrollbar-thumb
     margin-top : 1rem !important;
 }
 
+
+
+.button-wrapper {
+
+    text-align: center;
+
+    $root: &;
+  
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    width: 280px;
+  
+    &__text {
+        position: relative;
+        // font-family: 'helvetica';
+        font-size: 22px;
+        line-height: 32px;
+        color: #2A2A2A;
+        top: -48px;
+    }
+  
+    &__shape {
+        stroke-width: 4px;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 760;
+        fill: transparent;
+        stroke: #000000;
+        border-bottom: 5px solid black;
+        transition: stroke-width 700ms, stroke-dashoffset 700ms,       stroke-dasharray 700ms;
+    }
+
+    &:hover {
+      #{$root}__shape {
+          stroke-dasharray: 140 540;
+          stroke-dashoffset: -414;
+          stroke-width: 8px;
+      }
+    }
+}

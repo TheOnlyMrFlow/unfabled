@@ -39,7 +39,7 @@ function hideLandingAccordingToUrl() {
     console.log(location.href)
 
 
-    if (location.href.includes("#featured-products")) {
+    if (location.href.includes("#") || location.href.includes("?")) {
         landing.hide()
         landingFix.hide()
     }
