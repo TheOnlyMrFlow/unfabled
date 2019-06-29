@@ -23,16 +23,18 @@
  * International Registered Trademark & Property of PrestaShop SA
  *}
 <nav class="pagination">
-  <div class="col-md-4">
-    {* {block name='pagination_summary'}
+  {* <div class="col-md-4">
+    {block name='pagination_summary'}
       {l s='Showing %from%-%to% of %total% item(s)' d='Shop.Theme.Catalog' sprintf=['%from%' => $pagination.items_shown_from ,'%to%' => $pagination.items_shown_to, '%total%' => $pagination.total_items]}
-    {/block} *}
-  </div>
+    {/block}
+  </div> *}
 
-  <div class="col-md-6 offset-md-2 pr-0">
+  <div class="col-xs-2 col-sm-4"></div>
+
+  <div class="col-xs-8 col-sm-4">
     {block name='pagination_page_list'}
      {if $pagination.should_be_displayed}
-        <ul class="page-list clearfix text-sm-center">
+        <ul class="page-list clearfix text-xs-center">
           {foreach from=$pagination.pages item="page"}
 
 

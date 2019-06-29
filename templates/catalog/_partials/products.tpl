@@ -31,12 +31,12 @@
     {/foreach}
   </div>
 
-  {* {block name='pagination'}
+  {block name='pagination'}
     {include file='_partials/pagination.tpl' pagination=$listing.pagination}
-  {/block} *}
+  {/block}
 
   <div class="hidden-md-up text-xs-right up">
-    <a href="#header" class="btn btn-secondary">
+    <a href="#wrapper" class="btn btn-secondary">
       {l s='Back to top' d='Shop.Theme.Actions'}
       <i class="material-icons">&#xE316;</i>
     </a>
