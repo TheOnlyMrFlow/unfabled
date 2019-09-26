@@ -160,15 +160,30 @@ html::-webkit-scrollbar-thumb
     width: 100%;
     margin: 0;
     z-index: 10;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
 
     .landing-title {
 
         
+        display: -webkit-box;
+
+        
+        display: -ms-flexbox;
+
+        
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
 
         h1 {
             font-size: 7vw;
@@ -178,8 +193,14 @@ html::-webkit-scrollbar-thumb
 
     .landing-buttons-group {
 
+        display: -webkit-box;
+
+        display: -ms-flexbox;
+
         display: flex;
-        justify-content: space-evenly;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
         width: 100vw;
         padding: 0 25vw;
         margin: 0 
