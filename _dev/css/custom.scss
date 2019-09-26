@@ -214,13 +214,13 @@ html::-webkit-scrollbar-thumb
     /* Edge only */
   
     .landing-frame {
-        -ms-flex-pack: space-evenly;
+        -ms-flex-pack: space-around;
         justify-content: space-around;
       /* you can also add some other adjustments to size, margins etc to get the same positioning */
     }
 
     .landing-title {
-        -ms-flex-pack: space-evenly;
+        -ms-flex-pack: space-around;
         justify-content: space-around;
       /* you can also add some other adjustments to size, margins etc to get the same positioning */
     }
