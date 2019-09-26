@@ -160,30 +160,15 @@ html::-webkit-scrollbar-thumb
     width: 100%;
     margin: 0;
     z-index: 10;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: space-around;
 
     .landing-title {
 
         
-        display: -webkit-box;
-
-        
-        display: -ms-flexbox;
-
-        
         display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        justify-content: center;
 
         h1 {
             font-size: 7vw;
@@ -193,14 +178,8 @@ html::-webkit-scrollbar-thumb
 
     .landing-buttons-group {
 
-        display: -webkit-box;
-
-        display: -ms-flexbox;
-
         display: flex;
-        -webkit-box-pack: space-evenly;
-            -ms-flex-pack: space-evenly;
-                justify-content: space-evenly;
+        justify-content: space-around;
         width: 100vw;
         padding: 0 25vw;
         margin: 0 
@@ -209,23 +188,6 @@ html::-webkit-scrollbar-thumb
 
     }
 }
-
-@supports (-ms-accelerator: true) {
-    /* Edge only */
-  
-    .landing-frame {
-        -ms-flex-pack: space-around;
-        justify-content: space-around;
-      /* you can also add some other adjustments to size, margins etc to get the same positioning */
-    }
-
-    .landing-title {
-        -ms-flex-pack: space-around;
-        justify-content: space-around;
-      /* you can also add some other adjustments to size, margins etc to get the same positioning */
-    }
-  }
-
 .user-info-icon {
     font-size: 2rem;
 }
