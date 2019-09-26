@@ -162,7 +162,7 @@ html::-webkit-scrollbar-thumb
     z-index: 10;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 
     .landing-title {
 
@@ -179,7 +179,7 @@ html::-webkit-scrollbar-thumb
     .landing-buttons-group {
 
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         width: 100vw;
         padding: 0 25vw;
         margin: 0 
