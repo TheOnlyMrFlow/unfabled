@@ -210,6 +210,15 @@ html::-webkit-scrollbar-thumb
     }
 }
 
+@supports (-ms-accelerator: true) {
+    /* Edge only */
+  
+    .landing-frame, .landing-title {
+      justify-content: space-around;
+      /* you can also add some other adjustments to size, margins etc to get the same positioning */
+    }
+  }
+
 .user-info-icon {
     font-size: 2rem;
 }
